@@ -1,0 +1,39 @@
+/* PDF Generation Styles */
+.generating-pdf {
+  background: white !important;
+  box-shadow: none !important;
+  transform: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.generating-pdf * {
+  -webkit-print-color-adjust: exact !important;
+  print-color-adjust: exact !important;
+  color-adjust: exact !important;
+}
+
+/* Force page breaks between sections if needed */
+@media print {
+  .page-break {
+    page-break-before: always;
+  }
+  
+  /* Ensure backgrounds and colors are preserved */
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    color-adjust: exact !important;
+  }
+  
+  /* Hide unnecessary elements during PDF generation */
+  .no-print {
+    display: none !important;
+  }
+  
+  /* Ensure proper font rendering */
+  body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+} 

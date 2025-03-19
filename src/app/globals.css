@@ -1,0 +1,324 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f6f6f6;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --font-inter: var(--font-inter);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    /* --foreground: #ededed; */
+    --font: var(--font-inter);
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-inter);
+}
+
+@page {
+  size: A4;
+  margin: 0; 
+}
+
+#resume-content {
+  width: 210mm;
+  height: 297mm;
+  background: white;
+  overflow: hidden;
+  box-sizing: border-box;
+  page-break-inside: avoid;
+}
+
+.page {
+  page-break-before: always;
+  break-before: page;
+  width: 210mm;
+  min-height: 297mm;
+  position: relative;
+  overflow: hidden;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.page:first-of-type {
+  page-break-before: auto;
+  break-before: auto;
+}
+
+.page:last-of-type {
+  page-break-after: auto;
+  break-after: auto;
+}
+
+.page-break {
+  page-break-before: always;
+  break-before: page;
+}
+
+.page-container {
+  width: 800px;
+  min-height: 1123px;
+  border-radius: 8px;
+  background: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.resume-container {
+  width: 210mm;
+  height: 297mm;
+  background: white;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.left-column {
+  width: 140mm;
+  background-color: white;
+  padding: 40px 25px 20px 40px;
+  color: black;
+}
+
+.right-column {
+  width: 70mm;
+  background-color: #22405c;
+  border-top: 20px solid #182d40;
+  padding: 30px 24px 20px;
+  color: white;
+}
+
+.right-column h2 {
+  color: white;
+  text-transform: uppercase;
+  font-weight: 500;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.right-column .w-\[115px\] {
+  width: 115px;
+  height: 115px;
+}
+
+.right-column .w-\[115px\] img {
+  border-radius: 50%;
+  width: 115px;
+  height: 115px;
+  object-fit: cover;
+}
+
+.pdf-ready .right-column {
+  background-color: #22405c !important;
+  border-top: 20px solid #182d40 !important;
+  color: white !important;
+  -webkit-print-color-adjust: exact !important;
+  print-color-adjust: exact !important;
+}
+
+.pdf-ready .right-column h1, 
+.pdf-ready .right-column h2, 
+.pdf-ready .right-column h3, 
+.pdf-ready .right-column h4, 
+.pdf-ready .right-column h5, 
+.pdf-ready .right-column h6, 
+.pdf-ready .right-column p, 
+.pdf-ready .right-column span, 
+.pdf-ready .right-column div {
+  color: white !important;
+}
+
+.pdf-ready .left-column {
+  background-color: white !important;
+}
+
+.pdf-ready .left-column h1, 
+.pdf-ready .left-column h2, 
+.pdf-ready .left-column h3, 
+.pdf-ready .left-column h4, 
+.pdf-ready .left-column h5, 
+.pdf-ready .left-column h6, 
+.pdf-ready .left-column p, 
+.pdf-ready .left-column span, 
+.pdf-ready .left-column div {
+  color: black !important;
+}
+
+.pdf-ready img {
+  display: block !important;
+  max-width: 100% !important;
+  height: auto !important;
+  object-fit: cover !important;
+}
+
+.pdf-ready .right-column img,
+.pdf-ready [class*="rounded-full"] img {
+  border-radius: 50% !important;
+  width: 115px !important;
+  height: 115px !important;
+  object-fit: cover !important;
+}
+
+.pdf-ready .right-column h2,
+.pdf-ready .right-column [class*="font-medium"],
+.pdf-ready .right-column [class*="uppercase"] {
+  color: white !important;
+  border-bottom-color: rgba(255, 255, 255, 0.3) !important;
+  text-transform: uppercase !important;
+  font-weight: 500 !important;
+}
+
+@media print {
+  body {
+    background: white;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .page {
+    box-shadow: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .mt-\[10mm\] {
+    margin-top: 0 !important;
+  }
+  
+  .right-column {
+    background-color: #22405c !important;
+    border-top: 20px solid #182d40 !important;
+    color: white !important;
+    width: 70mm !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+  
+  .right-column h1, 
+  .right-column h2, 
+  .right-column h3, 
+  .right-column h4, 
+  .right-column h5, 
+  .right-column h6, 
+  .right-column p, 
+  .right-column span, 
+  .right-column div {
+    color: white !important;
+  }
+  
+  .left-column {
+    background-color: white !important;
+    width: 140mm !important;
+  }
+  
+  .left-column h1, 
+  .left-column h2, 
+  .left-column h3, 
+  .left-column h4, 
+  .left-column h5, 
+  .left-column h6, 
+  .left-column p, 
+  .left-column span, 
+  .left-column div {
+    color: black !important;
+  }
+  
+  img {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+  
+  .right-column img,
+  [class*="rounded-full"] img {
+    border-radius: 50% !important;
+    width: 115px !important;
+    height: 115px !important;
+    object-fit: cover !important;
+  }
+  
+  .right-column h2 {
+    color: white !important;
+    text-transform: uppercase !important;
+    font-weight: 500 !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3) !important;
+    padding-bottom: 0.5rem !important;
+    margin-bottom: 1rem !important;
+  }
+}
+
+.pdf-container {
+  width: 210mm;
+  height: 297mm;
+  background: white;
+  overflow: hidden;
+  box-sizing: border-box;
+  page-break-inside: avoid;
+}
+
+.pdf-ready .right-column,
+.pdf-container.pdf-ready .right-column {
+  background-color: #22405c !important;
+  border-top: 20px solid #182d40 !important;
+  color: white !important;
+  -webkit-print-color-adjust: exact !important;
+  print-color-adjust: exact !important;
+  width: 70mm !important;
+}
+
+.pdf-ready img,
+.pdf-container.pdf-ready img {
+  display: block !important;
+  max-width: 100% !important;
+  height: auto !important;
+}
+
+.pdf-ready .right-column img,
+.pdf-ready [class*="rounded-full"] img,
+.pdf-container.pdf-ready .right-column img,
+.pdf-container.pdf-ready [class*="rounded-full"] img {
+  border-radius: 50% !important;
+  width: 115px !important;
+  height: 115px !important;
+  object-fit: cover !important;
+}
+
+.pdf-ready .right-column h2,
+.pdf-container.pdf-ready .right-column h2 {
+  color: white !important;
+  text-transform: uppercase !important;
+  font-weight: 500 !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3) !important;
+  padding-bottom: 0.5rem !important;
+  margin-bottom: 1rem !important;
+}
+
+.pdf-ready .left-column,
+.pdf-container.pdf-ready .left-column {
+  background-color: white !important;
+  width: 140mm !important;
+  color: black !important;
+}
+
+.resume-container {
+  width: 210mm;
+  height: 297mm;
+  background: white;
+  overflow: hidden;
+  box-sizing: border-box;
+}
