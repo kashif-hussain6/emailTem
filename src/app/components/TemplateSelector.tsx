@@ -18,7 +18,7 @@ const TemplateSelector: FC<TemplateSelectorProps> = ({
       
       <div className="grid grid-cols-1 gap-4">
         {TEMPLATES.map((template) => {
-          // Get the thumbnail component
+         
           const ThumbnailComponent = template.thumbnailComponent;
           
           return (
