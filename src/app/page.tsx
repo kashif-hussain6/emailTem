@@ -32,7 +32,7 @@ const tabs: { id: TabType; label: string }[] = [
   { id: 'skills', label: 'OTHERS' }
 ];
 
-
+// A4 dimensions in mm
 const A4_WIDTH_MM = 210;
 const A4_HEIGHT_MM = 297;
 
