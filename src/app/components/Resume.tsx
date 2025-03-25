@@ -116,7 +116,7 @@ const Home: NextPage<ResumeProps> = ({
   return (
     <div className="bg-white w-full">
       <div className={`${isMobile ? 'flex flex-col' : 'flex'}`}>
-       
+        {/* Left Column */}
         <div 
           className={`
             ${isMobile ? 'w-full' : 'w-1/3'} 
@@ -155,7 +155,7 @@ const Home: NextPage<ResumeProps> = ({
           </div>
         </div>
 
-       
+        {/* Right Column */}
         <div className={`
           ${isMobile ? 'w-full' : 'w-2/3'} 
           bg-white
