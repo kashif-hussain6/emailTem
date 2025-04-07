@@ -63,7 +63,7 @@ export default function Home() {
 
   // Load data from localStorage if available
   useEffect(() => {
-    // Load projects
+   
     const savedProjects = localStorage.getItem('resumeProjects');
     if (savedProjects) {
       try {
@@ -77,6 +77,7 @@ export default function Home() {
       }
     }
   }, []);
+  
 
   const handleHeaderChange = (data: HeaderData) => {
     setResumeData(prev => ({ ...prev, header: data }));
