@@ -34,7 +34,7 @@ export default function SkillsPage() {
     }
   }, [skills]);
   
-  // Handle adding a new skill to a category
+
   const handleAddSkill = (categoryId: number, skill: string) => {
     if (skill.trim() === '') return;
     
