@@ -5,6 +5,10 @@ import { SkillCategory } from '../types/datatypes';
 
 interface SkillsProps {
   data: SkillCategory[];
+  typographic?: boolean; 
+  
+ 
+
 }
 
 export default function Skills({ data }: SkillsProps) {

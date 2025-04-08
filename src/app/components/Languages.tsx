@@ -4,7 +4,10 @@ import { Language } from '../types/datatypes';
 
 interface LanguagesProps {
   data: Language[];
+  darkMode?: boolean;
+  minimal?: boolean; 
 }
+
 
 export default function Languages({ data }: LanguagesProps) {
   if (!data || data.length === 0) return null;

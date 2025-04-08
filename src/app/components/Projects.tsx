@@ -2,6 +2,7 @@ import { Project } from '../types/datatypes';
 
 interface ProjectsProps {
   data: Project[];
+  darkMode?: boolean; 
 }
 
 export default function Projects({ data }: ProjectsProps) {

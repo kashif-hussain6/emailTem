@@ -4,6 +4,7 @@ import { Experience as ExperienceType } from "../types/datatypes";
 
 interface ExperienceProps {
   data: ExperienceType[];
+  darkMode?: boolean; 
 }
 
 const Experience: React.FC<ExperienceProps> = ({ data }) => {

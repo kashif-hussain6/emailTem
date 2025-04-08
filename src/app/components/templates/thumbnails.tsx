@@ -21,7 +21,12 @@ export const DefaultThumbnail: FC<ThumbnailProps> = ({ className = "" }) => {
           <div className="h-2 w-16 bg-gray-300 mb-2"></div>
           <div className="h-1 w-full bg-gray-200 mb-2"></div>
           <div className="h-1 w-full bg-gray-200 mb-2"></div>
+
+
+
+          
         </div>
+
         <div className="w-1/3 bg-blue-900 p-2">
           <div className="w-8 h-8 bg-gray-200 rounded-full mx-auto mb-2"></div>
           <div className="h-1 w-16 bg-gray-300 mx-auto mb-2"></div>
@@ -109,3 +114,75 @@ export const MinimalThumbnail: FC<ThumbnailProps> = ({ className = "" }) => {
     </div>
   );
 }; 
+
+
+export const CreativeThumbnail: FC<ThumbnailProps> = ({ className = "" }) => {
+  return (
+    <div className={`w-full h-full flex ${className}`}>
+      <div className="w-1/3 bg-gray-100 p-1">
+        <div className="w-12 h-12 rounded-full bg-gray-300 mx-auto mb-2"></div>
+        <div className="h-1 w-full bg-gray-300 mb-1"></div>
+        <div className="h-1 w-3/4 bg-gray-300 mb-3"></div>
+        <div className="h-1 w-full bg-gray-300 mb-1"></div>
+        <div className="h-1 w-3/4 bg-gray-300"></div>
+      </div>
+      <div className="w-2/3 p-1">
+        <div className="h-2 w-24 bg-gray-800 mb-1"></div>
+        <div className="h-1 w-16 bg-blue-500 mb-3"></div>
+        <div className="h-1 w-full bg-gray-300 mb-1"></div>
+        <div className="h-1 w-full bg-gray-300 mb-1"></div>
+        <div className="h-1 w-3/4 bg-gray-300 mb-3"></div>
+        <div className="h-2 w-16 bg-gray-800 mb-1"></div>
+        <div className="h-1 w-full bg-gray-300 mb-1"></div>
+      </div>
+    </div>
+  );
+};
+
+
+
+
+// Dark mode template thumbnail preview
+export const DarkModeThumbnail: FC<ThumbnailProps> = ({ className = "" }) => {
+  return (
+    <div className={`w-full h-full flex ${className} bg-gray-900`}>
+      <div className="w-1/3 bg-gray-800 p-1">
+        <div className="w-10 h-10 rounded-full bg-gray-700 mx-auto mb-2"></div>
+        <div className="h-1 w-full bg-gray-700 mb-1"></div>
+        <div className="h-1 w-3/4 bg-gray-700 mb-3"></div>
+      </div>
+      <div className="w-2/3 bg-gray-800 p-1 border-l border-gray-700">
+        <div className="h-2 w-20 bg-gray-600 mb-1"></div>
+        <div className="h-1 w-16 bg-blue-500 mb-3"></div>
+        <div className="h-1 w-full bg-gray-700 mb-1"></div>
+        <div className="h-1 w-full bg-gray-700 mb-1"></div>
+      </div>
+    </div>
+  );
+};
+
+
+
+// Typographic template thumbnail preview
+export const TypographicThumbnail: FC<ThumbnailProps> = ({ className = "" }) => {
+  return (
+    <div className={`w-full h-full flex flex-col ${className}`}>
+      <div className="flex justify-between p-1">
+        <div className="h-2 w-16 bg-gray-800"></div>
+        <div className="w-8 h-8 rounded-full bg-gray-300"></div>
+      </div>
+      <div className="h-px bg-gray-300 my-1"></div>
+      <div className="flex-1 flex p-1">
+        <div className="w-1/3">
+          <div className="h-1 w-12 bg-gray-800 mb-2"></div>
+          <div className="h-1 w-full bg-gray-300 mb-1"></div>
+        </div>
+        <div className="w-2/3">
+          <div className="h-1 w-14 bg-gray-800 mb-2"></div>
+          <div className="h-1 w-full bg-gray-300 mb-1"></div>
+          <div className="h-1 w-full bg-gray-300 mb-1"></div>
+        </div>
+      </div>
+    </div>
+  );
+};

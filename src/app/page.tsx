@@ -1,8 +1,7 @@
 'use client';
 
 import { useState, useRef, useEffect } from 'react';
-import Resume from './components/Resume/index';
-import ResumeWrapper, { generatePdf } from './components/ResumeWrapper';
+import ResumeWrapper from './components/ResumeWrapper';
 import HeaderForm from './components/forms/HeaderForm';
 import ExperienceForm from './components/forms/ExperienceForm';
 import EducationForm from './components/forms/EducationForm';
@@ -15,7 +14,7 @@ import headerData, {
   education as initialEducation,
   languages as initialLanguages,
   skills as initialSkills,
-  achievements as initialAchievements,
+  achievements as initialAchievements,  
   certifications as initialCertifications,
   projects as initialProjects,
   passion as initialPassion
@@ -30,6 +29,11 @@ const tabs: { id: TabType; label: string }[] = [
   { id: 'experience', label: 'EXPERIENCE' },
   { id: 'education', label: 'EDUCATION' },
   { id: 'skills', label: 'OTHERS' }
+
+  
+
+
+
 ];
 
 // A4 dimensions in mm
