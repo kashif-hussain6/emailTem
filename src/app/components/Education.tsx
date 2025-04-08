@@ -4,6 +4,8 @@ import { Education as EducationType } from "../types/datatypes";
 
 interface EducationProps {
   data: EducationType[];
+  darkMode?: boolean; 
+  minimal?: boolean; 
 }
 
 const Education: React.FC<EducationProps> = ({ data }) => {

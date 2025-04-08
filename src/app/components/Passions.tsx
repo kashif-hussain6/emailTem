@@ -18,6 +18,10 @@ const iconMap: { [key in IconType]: React.ReactNode } = {
 
 interface PassionsProps {
   data: Passion[];
+  darkMode?: boolean; 
+  minimal?: boolean; 
+
+
 }
 
 export default function Passions({ data }: PassionsProps) {
