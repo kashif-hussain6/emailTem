@@ -11,12 +11,7 @@ import TypographicTemplate from './TypographicTemplate';
 
 // Template registry - add new templates here
 export const TEMPLATES = [
-  {
-    id: 'default',
-    name: 'Default Template',
-    component: DefaultTemplate,
-    thumbnailComponent: DefaultThumbnail,
-  },
+
   
   
   {

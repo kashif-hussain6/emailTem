@@ -5,7 +5,9 @@ import { SkillCategory } from '../types/datatypes';
 
 interface SkillsProps {
   data: SkillCategory[];
-  typographic?: boolean; 
+  darkMode?: boolean; 
+  minimal?: boolean; 
+
   
  
 
