@@ -19,7 +19,7 @@ interface TemplateProps extends Omit<ResumeData, 'header'> {
 
 const DarkModeTemplate: FC<TemplateProps> = ({ 
   header = { email: '', phone: '', location: '', github: '', name: '', title: '', summary: '' }, 
-  experience = [],  // Default value added here
+  experience = [],  
   education = [], 
  
   languages, 

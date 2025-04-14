@@ -17,6 +17,7 @@ export default function HeaderForm({ data, onChange, profileImage, onProfileImag
   const firstName = nameParts[0] || '';
   const lastName = nameParts.slice(1).join(' ') || '';
 
+
   // Split location into city and postal code, handling undefined case
   const locationParts = (data.location || '').split(',');
   const city = locationParts[0] || '';
@@ -92,7 +93,7 @@ export default function HeaderForm({ data, onChange, profileImage, onProfileImag
                   Recommended: Square image, 400x400px or larger
                 </p>
               </div>
-            </div>
+            </div>  
           </div>
 
           <div className="space-y-6">

@@ -20,8 +20,8 @@ interface TemplateProps extends Omit<ResumeData, 'header'> {
 
 const CreativeTemplate: FC<TemplateProps> = ({ 
   header = { email: '', phone: '', location: '', github: '', name: '', title: '', summary: '' }, 
-  experience = [],  // Default value added here
-  education = [],   // Default value added here
+  experience = [],  
+  education = [],   
   languages, 
   skills, 
   achievements, 

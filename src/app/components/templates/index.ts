@@ -1,5 +1,6 @@
 // Template index file
 // This file exports all available resume templates
+
 import DefaultTemplate from './DefaultTemplate';
 import ModernTemplate from './ModernTemplate';
 import MinimalTemplate from './MinimalTemplate';
@@ -10,12 +11,7 @@ import TypographicTemplate from './TypographicTemplate';
 
 // Template registry - add new templates here
 export const TEMPLATES = [
-  {
-    id: 'default',
-    name: 'Default Template',
-    component: DefaultTemplate,
-    thumbnailComponent: DefaultThumbnail,
-  },
+
   
   
   {
@@ -30,7 +26,6 @@ export const TEMPLATES = [
     component: MinimalTemplate,
     thumbnailComponent: MinimalThumbnail,
   },
-
 
   {
     id: 'Creative',
@@ -51,9 +46,13 @@ export const TEMPLATES = [
     thumbnailComponent: TypographicTemplate,
   },
 
+
+
+  
 ];
 
 export type TemplateId = 'default' | 'modern' | 'minimal';
+
 // Helper function to get template by ID
 export function getTemplateById(id: TemplateId) {
   return TEMPLATES.find(template => template.id === id) || TEMPLATES[0];
